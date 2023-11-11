@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="/public/svg_diario/logo.svg" type="image/x-icon">
+    <title>Contato</title>
+    <link rel="stylesheet" href="/code/Contato.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <style>
+        /* Estilização das caixas de entrada */
+        input[type="text"] {
+            top: 400px;
+            left: 50px;
+            width: 821px;
+            height: 61px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: rgba(217, 217, 217, 1);
+            font-family: 'Noto Sans';
+            font-size: 30px;
+            position: absolute;
+            border: none;
+        }
+
+        input[type="email"] {
+            width: 300px;
+            top: 475px;
+            left: 50px;
+            width: 821px;
+            height: 61px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: rgba(217, 217, 217, 1);
+            font-family: 'Noto Sans';
+            font-size: 30px;
+            position: absolute;
+            border: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            outline: none;
+        }
+
+        textarea {
+            top: 550px;
+            left: 50px;
+            width: 714px;
+            height: 156px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: rgba(217, 217, 217, 1);
+            font-family: 'Noto Sans';
+            font-size: 30px;
+            position: absolute;
+            resize: none;
+            border: none;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+        /* Estilização do botão */
+        .enviar {
+            top: 585px;
+            left: 810px;
+            width: 92px;
+            height: 92px;
+            background-color: #9CF0BA;
+            position: absolute;
+            -ms-border-radius: 46px / 46px;
+            -o-border-radius: 46px / 46px;
+            -moz-border-radius: 46px / 46px;
+            -webkit-border-radius: 46px / 46px;
+            border-radius: 46px / 46px;
+            border-color: #a1f1c0;
+        }
+
+        p {
+            font-family: 'Noto Sans';
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <header>
+            <container class="header-logo">
+                <img src="/public/svg_diario/logo.svg" alt="Logo: aperto de mãos">
+                <h1>Support Teens</h1>
+            </container>
+            </container>
+            <container class="header-buttons">
+                <button><a href="index.html" style="text-decoration: none; color: black;">Home
+                    </a></button>
+                <button><a href="cadastro.html" style="text-decoration: none; color: black;">Cadastro
+                    </a></button>
+                <button><a href="HomeChat.html" style="text-decoration: none; color: black;">Chat
+                    </a></button>
+                <button><a href="Descritiva.html" style="text-decoration: none; color: black;">Descritiva
+                    </a></button>
+                <button><a href="Contato.html" style="text-decoration: none; color: black;">Contato
+                    </a></button>
+                <button><a href="sobre.html" style="text-decoration: none; color: black;">Sobre
+                    </a></button>
+                <button><a href="home_diario.html" style="text-decoration: none; color: black;">Diário
+                    </a></button>
+                <button><a href="perfil.html"><img src="/public/svg_diario/icon_profile-backgroud.svg"
+                            alt="Perfil"></a></button>
+            </container>
+        </header>
+    </header>
+
+    <div class="rectangle_85">
+        <h2 style="font-size: 64px; font-weight: 400; top: -45px; left: 292px; position: absolute;">
+            Contate-nos</h2>
+
+        <img src="/public/img_kaue/location-on-map.svg"
+            style=" top: 105px; left: 50px; width: 64.89px; height: 64.88px; position: absolute;">
+        <h1 style="	top: 105px; left: 150px; position: absolute; font-size: 32px; font-weight: 400;">
+            Franca - SP</h1>
+
+        <img src="/public/img_kaue/PhoneCall.png"
+            style=" top: 207px; left: 50px; width: 64.89px; height: 64.88px; position: absolute;">
+        <h1 style="display: inline;	top: 207px; left: 150px; font-size: 32px; font-weight: 400; position: absolute;">
+            (16) 99991-1025</h1>
+
+        <img src="/public/img_kaue/google-svgrepo-com.svg"
+            style=" top: 309px; left: 50px; width: 64.89px; height: 64.88px; position: absolute;">
+        <h1 style="	top: 306px; left: 150px; font-size: 32px; font-weight: 400; position: absolute;">
+            SupportTeens@gmail.com</h1>
+        <div id="app">
+            <div>
+                <label for="nome"></label>
+                <input type="text" id="nome" v-model="nome" placeholder="Nome">
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="email" id="email" v-model="email" placeholder="Email">
+            </div>
+            <div>
+                <label for="texto"></label>
+                <textarea id="texto" v-model="texto" placeholder="Digite seu texto"></textarea>
+            </div>
+            <button class="enviar" @click="enviarFormulario"> <img src="/public/img_kaue/icons8-enviar-90.png"
+                    style="margin-top: 2px; margin-left: -7px; width: 70px; height: 70px;"></button>
+        </div>
+    </div>
+
+    <!-- Caixas de Texto -->
+
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                nome: '',
+                email: '',
+                texto: ''
+            },
+            methods: {
+                enviarFormulario() {
+                    console.log(this.nome);
+                    console.log(this.email);
+                    console.log(this.texto);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

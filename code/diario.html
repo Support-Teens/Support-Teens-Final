@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="/public/svg_diario/logo.svg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-diario.css">
+    
+
+    <title>Diário | Support Teens</title>
+</head>
+
+<body>
+    <header>
+        <container class="header-logo">
+            <img src="/public/svg_diario/logo.svg" alt="Logo: aperto de mãos">
+            <h1>Support Teens</h1>
+        </container>
+        <container class="header-buttons">
+            <button><a href="#"><img src="/public/svg_diario/icon_profile-backgroud.svg" alt="Perfil"></a></button>
+            <button><a href="#">
+                    <img src="/public/svg_diario/icon _menu_.svg" alt="Menu">
+                </a></button>
+        </container>
+    </header>
+    <main>
+        <aside id="options">
+            <div class="title">
+                <h1 class="title-page">Diário</h1>
+            </div>
+            <div class="actions">
+                <a href="home_diario.html"><button class="home"><img src="/public/svg_diario/actions-home.svg"
+                            alt="Ícone de casa"></button></a>
+                <a href="#"><button class="delete"><img src="/public/svg_diario/actions-delete.svg"
+                            alt="Ícone de lixeira"></button></a>
+                <button class="print" onclick="salvarPDF()"><img src="/public/svg_diario/actions-print.svg"
+                        alt="Ícone de impressora"></button>
+                <a href="#"><button class="previous"><img src="/public/svg_diario/actions-previous.svg"
+                            alt="Ícone de seta para a esquerda"></button></a>
+                <a href="#"><button class="next"><img src="/public/svg_diario/actions-next.svg"
+                            alt="Ícone de seta para a direita"></button></a>
+            </div>
+            <div class="edit">
+                <button><a href="#">Editar</a></button>
+                <button><a href="#">Inserir</a></button>
+                <button><a href="#">Tags</a></button>
+                <button><a href="#">Página</a></button>
+            </div>
+        </aside>
+        <section id="diary">
+            <div class="date">
+                <p id="dataHoje"></p>
+                <p id="horaAtual"></p>
+            </div>
+            <div class="toolbar">
+                <button><a href="#"><img src="/public/svg_diario/diary-toolbar-undo.svg" alt="Desfazer"></a></button>
+                <button><a href="#"><img src="/public/svg_diario/diary-toolbar-clipboard.svg" alt="Desfazer"></a></button>
+                <select id="fontSelect" onchange="mudarFonte()">
+                    <option value="Arial">Arial</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Noto Sans">Noto Sans</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+                <button onclick="diminuirFonte()"><a href="#"><b>A -</b></a></button>
+                <button onclick="aumentarFonte()"><a href="#"><b>A +</b></button>
+                <input type="color" id="corFonte" onchange="mudarCorFonte()" value="#000000">
+            </div>
+            <div class="note">
+                <div class="title-note">
+                    <input type="text">
+                    <div class="body-text">
+                        <textarea id="editor"></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <table class="links">
+            <tbody>
+                <tr>
+                    <th scope="col">Institucional</th>
+                    <th scope="col">Contate-nos</th>
+                    <th scope="col">Acessibilidade</th>
+                    <th scope="col">Minha conta</th>
+                    <th scope="col">Privacy Policy</th>
+                    <th scope="col">Siga-nos</th>
+                </tr>
+                <tr>
+                    <td>Sobre nós</td>
+                    <td>Email</td>
+                </tr>
+                <tr>
+                    <td>Blog</td>
+                    <td>Whatsapp</td>
+                </tr>
+                <tr>
+                    <td>Trabalhe Conosco</td>
+                </tr>
+                <tr>
+                    <td>Sobre a SupportTeens</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="copyright">
+            <p>@Copyright Support Teens 2023 -
+                Todos os
+                direitos
+                reservados.</p>
+        </div>
+    </footer>
+    <script src="diario.js"></script>
+</body>
+
+
+
+</html>
