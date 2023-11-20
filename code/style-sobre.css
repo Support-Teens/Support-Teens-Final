@@ -28,11 +28,19 @@ body {
     color: var(--font);
 }
 
-header {
+/*---------------------------------HEADER-------------------------------*/
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/*header {
     width: 100%;
     height: 6.25%;
     position: fixed;
-    /*z-index: 1;*/
+    /*z-index: 1;*
     background: var(--header);
     display: flex;
     flex-direction: row;
@@ -76,17 +84,21 @@ header {
     width: 2rem;
 }
 
-/*.header-buttons a {
+.header-buttons a {
     text-decoration: none;
     background-color: ;
 }*/
 
+/*-----------------------------------MAIN-------------------------------*/
+
 main {
     align-self: center;
-    width: 70%;
+    /*width: 70%;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    max-width: 1000px;
 }
 
 article {
@@ -126,33 +138,32 @@ article {
 #faq,
 #help {
     padding-bottom: 8%;
+    width: 100%;
 }
 
 #introduction {
     padding-top: 15%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1.6fr 1.4fr;
     align-items: center;
     gap: 8%;
 }
 
 #introduction img {
-    width: 40%;
+    width: 100%;
 }
 
 #cards {
     padding-top: 6%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 5%;
 }
 
 .card {
     border: solid;
     border-radius: 20px;
-    padding: 2%;
+    padding: 6%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -176,15 +187,16 @@ article {
 
 .professionals {
     padding: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: baseline;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3%;
+
 }
 
 .professionals img {
     padding-top: 8%;
     padding-bottom: 8%;
+    width: 100%;
 }
 
 .professionals h2 {
@@ -192,7 +204,9 @@ article {
 }
 
 #faq {
-    background-image: url(src/svg/gradiente.svg);
+    /*background-image: url(src/svg/gradiente.svg);*/
+    display: flex;
+    flex-direction: column;
 }
 
 .question {
@@ -202,16 +216,20 @@ article {
 }
 
 #help {
-    padding-top: 8%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8%;
+}
+
+#help img {
+    width: 100%;
+    align-self: center;
 }
 
 .help-left {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .help-buttons {
@@ -247,14 +265,62 @@ article {
     background-color: var(--botton);
 }
 
-.links {
+/*---------------------------------FOOTER-------------------------------*/
+footer {
+    opacity: 0.99;
+}
+
+.rectangle_footer {
+    opacity: 0.99;
+    background: #CDCDCD;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-light {
+    background-color: #A2B0EE !important;
+}
+
+.bg-dark {
+    background-color: #e9e9e9 !important;
+}
+
+.container {
+    margin-top: 20px;
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+    padding-bottom: 2%;
+}
+
+.footer-table {
+    width: 100%;
+}
+
+.footer-table th,
+.footer-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.footer-table tr,
+.footer-table tr a {
+    text-align: left;
+    font-family: 'Noto Sans';
+    color: black;
+}
+
+/*.links {
     width: 100%;
     height: max-content;
     background: var(--footer);
     font-family: 'Noto Sans';
     text-align: left;
-    padding-inline: 150px;
-    padding-block: 20px;
+    padding-inline: 9.375rem;
+    padding-block: 1.25rem;
     font-size: 0.85rem;
 }
 
@@ -265,4 +331,122 @@ article {
     font-size: 0.75rem;
     background-color: var(--footer2);
     padding-block: 5px;
+}*/
+
+/*-----------------------------RESPONSIVIDADE-----------------------------*/
+/*celular*/
+@media screen and (max-width: 739px) {
+    main {
+        width: 80%;
+    }
+
+    article {
+        gap: 1rem;
+    }
+
+    #introduction,
+    #cards,
+    .professionals,
+    #help {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+
+
+    #chat,
+    #experts,
+    #diary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .subtitle2 {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .paragraph {
+        font-family: Montserrat;
+        font-size: 0.8rem;
+    }
+
+    .help-buttons button {
+        border-radius: 4px;
+        box-shadow: 1px 1px 2px var(--shadow);
+    }
+
+    .help-buttons a {
+        font-size: 0.8rem;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 740px) and (max-width: 969px) {
+    main {
+        width: 80%;
+    }
+
+    .title {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .subtitle2 {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .paragraph {
+        font-family: Montserrat;
+        font-size: 0.8rem;
+    }
+
+    .help-buttons button {
+        border-radius: 4px;
+        box-shadow: 1px 1px 2px var(--shadow);
+    }
+
+    .help-buttons a {
+        font-size: 0.8rem;
+    }
+}
+
+/*Tablet na horizontal e PC pequeno*/
+@media screen and (min-width: 970px) and (max-width: 1200px) and (orientation:landscape) {
+    main {
+        width: 70%;
+    }
+
+    .professionals {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .professionals img {
+        width: 100%;
+    }
 }

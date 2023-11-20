@@ -6,12 +6,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre | Support Teens</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style-sobre.css">
     <!--<link rel="stylesheet" href="style-sobre-header.css">-->
 </head>
 
 <body>
-    <header>
+    <header class="fixed-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="/public/svg_diario/logo.svg" alt="Logo: aperto de mãos" height="30"
+                    class="d-inline-block align-top">
+                Support Teens
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Chat</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cadastro.html">Descritiva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diario.html">Diário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            
+    </header>
+    <!--<header>
         <container class="header-logo">
             <img src="/public/svg_sobre/logo.svg" alt="Logo: aperto de mãos">
             <h1>Support Teens</h1>
@@ -34,19 +78,7 @@
             <button><a href="perfil.html"><img src="/public/svg_diario/icon_profile-backgroud.svg"
                         alt="Perfil"></a></button>
         </container>
-        <!--
-        <div class="ellipse_1"></div>
-
-        <h1 style="left: 8.5%; top: 1px; position: absolute; font-size: 32px; font-weight: 400; line-height: normal;">
-            Support Teens</h1>
-
-        <div class="ellipse_2"></div>
-        <img src="src/icon_profile-backgroud.svg"
-            style="width: 58.29px; height: 60px; top: 15px; left: 87.05%; position: absolute;">
-
-        <img src="src/icon _menu_.svg" style="width: 57px; height: 57px; top: 15px; left: 92%; position: absolute;">
-            -->
-    </header>
+    </header>-->
     <main>
         <section id="introduction">
             <article>
@@ -183,14 +215,46 @@
                         problemas de saúde mental.</p>
                 </article>
                 <div class="help-buttons">
-                    <button id="contact"><a href="#">Contato</a></button>
-                    <button id="work"><a href="#">Trabalhe Conosco</a></button>
+                    <button id="contact"><a href="Contato.html">Contato</a></button>
+                    <button id="work"><a href="Contato.html">Trabalhe Conosco</a></button>
                 </div>
             </div>
             <img class="image" src="/public/img_sobre/help-image.png" alt="Grupo de especialistas em saúde mental">
         </section>
     </main>
-    <footer>
+    <footer class="footer bg-dark text-light mt-4">
+        <div class="container">
+            <table class="footer-table">
+                <tbody>
+                    <tr>
+                        <th>Institucional</th>
+                        <th>Contate-nos</th>
+                        <th>Acessibilidade</th>
+                        <th>Minha conta</th>
+                        <th>Privacy Policy</th>
+                        <th>Siga-nos</th>
+                    </tr>
+                    <tr>
+                        <td><a href="sobre.html">Sobre nós</a></td>
+                        <td><a href="mailto:">Email</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="Contato.html">Trabalhe Conosco</a></td>
+                        <td>Whatsapp</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </footer>
+    <div class="rectangle_footer">
+        <p style="color: black;">@Copyright Support Teens 2023 -
+            Todos os
+            direitos
+            reservados.</p>
+    </div>
+    <!--<footer>
         <table class="links">
             <tbody>
                 <tr>
@@ -218,15 +282,16 @@
             </tbody>
         </table>
 
-
         <div class="copyright">
             <p>@Copyright Support Teens 2023 -
                 Todos os
                 direitos
                 reservados.</p>
         </div>
-
-    </footer>
+    </footer>-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
