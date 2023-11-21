@@ -5,34 +5,54 @@
     <link rel="icon" href="/public/svg_diario/logo.svg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home Diário | Support Teens</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style-home-diario.css">
 </head>
 
 <body>
-    <header>
-        <container class="header-logo">
-            <img src="/public/svg_diario/logo.svg" alt="Logo: aperto de mãos">
-            <h1>Support Teens</h1>
-        </container>
-        <container class="header-buttons">
-            <button><a href="index.html" style="text-decoration: none; color: black;">Home
-                </a></button>
-            <button><a href="cadastro.html" style="text-decoration: none; color: black;">Cadastro
-                </a></button>
-            <button><a href="HomeChat.html" style="text-decoration: none; color: black;">Chat
-                </a></button>
-            <button><a href="Descritiva.html" style="text-decoration: none; color: black;">Descritiva
-                </a></button>
-            <button><a href="Contato.html" style="text-decoration: none; color: black;">Contato
-                </a></button>
-            <button><a href="sobre.html" style="text-decoration: none; color: black;">Sobre
-                </a></button>
-            <button><a href="home_diario.html" style="text-decoration: none; color: black;">Diário
-                </a></button>
-            <button><a href="perfil.html"><img src="/public/svg_diario/icon_profile-backgroud.svg"
-                        alt="Perfil"></a></button>
-        </container>
+    <header class="fixed-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="/public/svg_diario/logo.svg" alt="Logo: aperto de mãos" height="30"
+                    class="d-inline-block align-top">
+                Support Teens
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Chat</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cadastro.html">Descritiva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diario.html">Diário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main class="main">
         <aside>
@@ -77,143 +97,141 @@
             <div class="notes-actions">
                 <div class="way">
                     <button><a href="#"><img src="/public/svg_diario/way-return.svg"><a></button>
-                    <button><a href="#">Pasta<a></button>
+                    <button><a href="#">Pasta <a></button>
                     <button><a href="#">Subpasta<a></button>
                 </div>
-            </div>
-            <div class="new-note">
-                <a href="diario.html"><button class="new-note-button"><img src="/public/svg_diario/notes-new-note.svg"
-                            alt="Nova anotação"></button></a>
-            </div>
-            <div class="content">
-                <button><a href="#"><img src="/public/svg_diario/content-folder.svg"><a></button>
-                <div class="all-notes">
-
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
-                    <a href="diario.html">
-                        <div class="note">
-                            <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                            <h3 class="title-note">Título</h3>
-                            <div class="note-content">Corpo do texto</div>
-                        </div>
-                    </a>
+                <div class="new-note">
+                    <a href="diario.html"><button class="new-note-button"><img
+                                src="/public/svg_diario/notes-new-note.svg" alt="Nova anotação"></button></a>
                 </div>
             </div>
+            <div class="button-file">
+                <button><a href="#"><img src="/public/svg_diario/content-folder.svg"><a></button>
+            </div>
+            <div class="all-notes">
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+                <a href="diario.html">
+                    <div class="note">
+                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
+                        <h3 class="title-note">Título</h3>
+                        <div class="note-content">Corpo do texto</div>
+                    </div>
+                </a>
+            </div>
+
         </section>
     </main>
-    <footer>
-        <table class="links">
-            <tbody>
-                <tr>
-                    <th scope="col">Institucional</th>
-                    <th scope="col">Contate-nos</th>
-                    <th scope="col">Acessibilidade</th>
-                    <th scope="col">Minha conta</th>
-                    <th scope="col">Privacy Policy</th>
-                    <th scope="col">Siga-nos</th>
-                </tr>
-                <tr>
-                    <td>Sobre nós</td>
-                    <td>Email</td>
-                </tr>
-                <tr>
-                    <td>Blog</td>
-                    <td>Whatsapp</td>
-                </tr>
-                <tr>
-                    <td>Trabalhe Conosco</td>
-                </tr>
-                <tr>
-                    <td>Sobre a SupportTeens</td>
-                </tr>
-            </tbody>
-        </table>
-
-
-        <div class="copyright">
-            <p>@Copyright Support Teens 2023 -
-                Todos os
-                direitos
-                reservados.</p>
+    <footer class="footer bg-dark text-light mt-4">
+        <div class="container">
+            <table class="footer-table">
+                <tbody>
+                    <tr>
+                        <th>Institucional</th>
+                        <th>Contate-nos</th>
+                        <th>Acessibilidade</th>
+                        <th>Minha conta</th>
+                        <th>Privacy Policy</th>
+                        <th>Siga-nos</th>
+                    </tr>
+                    <tr>
+                        <td><a href="sobre.html">Sobre nós</a></td>
+                        <td><a href="Contato.html">Email</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="Contato.html">Trabalhe Conosco</a></td>
+                        <td>Whatsapp</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
     </footer>
+    <div class="rectangle_footer">
+        <p style="color: black;">@Copyright Support Teens 2023 -
+            Todos os
+            direitos
+            reservados.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

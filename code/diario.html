@@ -5,24 +5,56 @@
     <link rel="icon" href="/public/svg_diario/logo.svg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="style-diario.css">
-    
+
 
     <title>Diário | Support Teens</title>
 </head>
 
 <body>
-    <header>
-        <container class="header-logo">
-            <img src="/public/svg_diario/logo.svg" alt="Logo: aperto de mãos">
-            <h1>Support Teens</h1>
-        </container>
-        <container class="header-buttons">
-            <button><a href="#"><img src="/public/svg_diario/icon_profile-backgroud.svg" alt="Perfil"></a></button>
-            <button><a href="#">
-                    <img src="/public/svg_diario/icon _menu_.svg" alt="Menu">
-                </a></button>
-        </container>
+    <header class="fixed-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="/public/svg_diario/logo.svg" alt="Logo: aperto de mãos" height="30"
+                    class="d-inline-block align-top">
+                Support Teens
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Chat</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cadastro.html">Descritiva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diario.html">Diário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            
     </header>
     <main>
         <aside id="options">
@@ -55,7 +87,8 @@
             </div>
             <div class="toolbar">
                 <button><a href="#"><img src="/public/svg_diario/diary-toolbar-undo.svg" alt="Desfazer"></a></button>
-                <button><a href="#"><img src="/public/svg_diario/diary-toolbar-clipboard.svg" alt="Desfazer"></a></button>
+                <button><a href="#"><img src="/public/svg_diario/diary-toolbar-clipboard.svg"
+                            alt="Desfazer"></a></button>
                 <select id="fontSelect" onchange="mudarFonte()">
                     <option value="Arial">Arial</option>
                     <option value="Montserrat">Montserrat</option>
@@ -69,48 +102,49 @@
             </div>
             <div class="note">
                 <div class="title-note">
-                    <input type="text">
+                    <input type="text" id="title-note" placeholder="Digite um título">
                     <div class="body-text">
-                        <textarea id="editor"></textarea>
+                        <textarea id="editor" placeholder="Escreva sobre seu dia..."></textarea>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <table class="links">
-            <tbody>
-                <tr>
-                    <th scope="col">Institucional</th>
-                    <th scope="col">Contate-nos</th>
-                    <th scope="col">Acessibilidade</th>
-                    <th scope="col">Minha conta</th>
-                    <th scope="col">Privacy Policy</th>
-                    <th scope="col">Siga-nos</th>
-                </tr>
-                <tr>
-                    <td>Sobre nós</td>
-                    <td>Email</td>
-                </tr>
-                <tr>
-                    <td>Blog</td>
-                    <td>Whatsapp</td>
-                </tr>
-                <tr>
-                    <td>Trabalhe Conosco</td>
-                </tr>
-                <tr>
-                    <td>Sobre a SupportTeens</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="copyright">
-            <p>@Copyright Support Teens 2023 -
-                Todos os
-                direitos
-                reservados.</p>
+    <footer class="footer bg-dark text-light mt-4">
+        <div class="container">
+            <table class="footer-table">
+                <tbody>
+                    <tr>
+                        <th>Institucional</th>
+                        <th>Contate-nos</th>
+                        <th>Acessibilidade</th>
+                        <th>Minha conta</th>
+                        <th>Privacy Policy</th>
+                        <th>Siga-nos</th>
+                    </tr>
+                    <tr>
+                        <td><a href="sobre.html">Sobre nós</a></td>
+                        <td><a href="Contato.html">Email</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="Contato.html">Trabalhe Conosco</a></td>
+                        <td>Whatsapp</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </footer>
+    <div class="rectangle_footer">
+        <p style="color: black;">@Copyright Support Teens 2023 -
+            Todos os
+            direitos
+            reservados.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="diario.js"></script>
 </body>
 

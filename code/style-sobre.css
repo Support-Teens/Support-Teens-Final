@@ -394,6 +394,22 @@ footer {
     .help-buttons a {
         font-size: 0.8rem;
     }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    .rectangle_footer {
+        text-align: center;
+        font-size: 0.6rem;
+    }
 }
 
 /*Tablet*/

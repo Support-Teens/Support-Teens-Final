@@ -30,53 +30,15 @@ body {
     color: var(--font);
 }
 
-header {
-    width: 100%;
-    height: 6.25%;
+/*---------------------------------HEADER-------------------------------*/
+.fixed-header {
     position: fixed;
-    /*z-index: 1;*/
-    background: var(--header);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.header-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 4.24%;
-}
-
-.header-logo img {
-    width: 5.18%;
-}
-
-.header-logo h1 {
-    font-family: Montserrat;
-    font-size: 1.5rem;
-    font-weight: 400;
-    padding-left: 0.5rem;
-
-}
-
-.header-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-inline: 2%;
-    gap: 1rem;
-}
-
-.header-buttons button {
-    background: none;
-    border: none;
-}
-
-.header-buttons img {
-    width: 2rem;
-}
+/*-----------------------------------MAIN-------------------------------*/
 
 main {
     display: flex;
@@ -282,7 +244,13 @@ textarea {
     outline: none;
     font-family: Montserrat;
     padding-block: 10px;
+}
 
+.title-note input::placeholder,
+textarea::placeholder {
+    color: var(--font);
+    opacity: .5;
+    font-weight: 500;
 }
 
 .title-note input {
@@ -295,23 +263,103 @@ textarea {
 }
 
 
-.links {
-    width: 100%;
-    height: max-content;
-    background: var(--footer);
-    font-family: 'Noto Sans';
-    text-align: left;
-    padding-inline: 150px;
-    padding-block: 20px;
-    font-size: 0.85rem;
-    margin-top: 42px;
+/*---------------------------------FOOTER----------------------------------*/
+footer {
+    opacity: 0.99;
 }
 
-.copyright {
+.rectangle_footer {
+    opacity: 0.99;
+    background: #CDCDCD;
+    width: 100%;
     display: flex;
     justify-content: center;
-    font-family: Noto Sans;
-    font-size: 0.75rem;
-    background-color: var(--footer2);
-    padding-block: 5px;
+}
+
+.bg-light {
+    background-color: #A2B0EE !important;
+}
+
+.bg-dark {
+    background-color: #e9e9e9 !important;
+}
+
+.container {
+    margin-top: 20px;
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+    padding-bottom: 2%;
+}
+
+.footer-table {
+    width: 100%;
+}
+
+.footer-table th,
+.footer-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.footer-table tr,
+.footer-table tr a {
+    text-align: left;
+    font-family: 'Noto Sans';
+    color: black;
+}
+
+
+/*-----------------------------RESPONSIVIDADE-----------------------------*/
+
+/*Celular acima de 321px*/
+@media screen and (max-width: 795px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #options {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title,
+    .actions,
+    .date {
+        padding-block: 0;
+    }
+
+    .title-page {
+        margin-bottom: 0;
+    }
+
+    .edit {
+        display: none;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    .rectangle_footer {
+        text-align: center;
+        font-size: 0.6rem;
+    }
 }
