@@ -215,8 +215,8 @@
                         problemas de saúde mental.</p>
                 </article>
                 <div class="help-buttons">
-                    <button id="contact"><a href="Contato.php">Contato</a></button>
-                    <button id="work"><a href="Contato.php">Trabalhe Conosco</a></button>
+                    <button id="contact"><a href="Contato.php">Entrar em contato</a></button>
+                    <!--<button id="work"><a href="Contato.php">Trabalhe Conosco</a></button>-->
                 </div>
             </div>
             <img class="image" src="./public/img_sobre/help-image.png" alt="Grupo de especialistas em saúde mental">
