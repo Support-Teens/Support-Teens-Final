@@ -152,7 +152,7 @@ a {
     margin-block: 15px;
     display: flex;
     flex-direction: row;
-    height: 2rem;
+    height: 2.5rem;
     align-items: center;
     gap: 5px;
     background-color: var(--backgroudBodyText);
@@ -172,6 +172,11 @@ a {
     cursor: pointer;
     font-family: Montserrat;
     font-size: 1rem;
+    justify-content: center;
+}
+
+.toolbar button img {
+    height: 100%;
 }
 
 .toolbar select {
