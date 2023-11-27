@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <link rel="icon" href="/public/svg_diario/logo.svg" type="image/x-icon">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style-diario.css">
 
 
-    <title>Diário - Support Teens</title>
+    <title>Diário | Support Teens</title>
 </head>
 
 <body>
@@ -61,7 +61,7 @@
                 <h1 class="title-page">Diário</h1>
             </div>
             <div class="actions">
-                <a href="home_diario.html"><button class="home"><img src="./public/svg_diario/actions-home.svg"
+                <a href="home_diario.php"><button class="home"><img src="./public/svg_diario/actions-home.svg"
                             alt="Ícone de casa"></button></a>
                 <a href="#"><button class="delete"><img src="./public/svg_diario/actions-delete.svg"
                             alt="Ícone de lixeira"></button></a>
@@ -80,12 +80,14 @@
             </div>
         </aside>
         <section id="diary">
+            <form action="diario_note.php" method="POST">
             <div class="date">
-                <p id="dataHoje"></p>
-                <p id="horaAtual"></p>
+                <p id="dataHoje" name="date_note"></p>
+                <p id="horaAtual" name="hour_note"></p>
             </div>
             <div class="toolbar">
-                <button><a href="#"><img src="./public/svg_diario/diary-toolbar-undo.svg" alt="Desfazer"></a></button>
+                <button type="submit" name="save_note"><img src="./public/svg_diario/diary-toolbar-save.svg" alt="Desfazer"></button>
+                <button><a href="#"><img src="./public/svg_diario/diary-toolbar-undo.svg" alt="Salvar"></a></button>
                 <button><a href="#"><img src="./public/svg_diario/diary-toolbar-clipboard.svg"
                             alt="Desfazer"></a></button>
                 <select id="fontSelect" onchange="mudarFonte()">
@@ -101,12 +103,13 @@
             </div>
             <div class="note">
                 <div class="title-note">
-                    <input type="text" id="title-note" placeholder="Digite um título">
+                    <input type="text" id="title-note" name="title_note" value="<?php echo $_POST['title_note'] ?? ''; ?>" placeholder="Digite um título">
                     <div class="body-text">
-                        <textarea id="editor" placeholder="Escreva sobre seu dia..."></textarea>
+                        <textarea id="editor" name="body_note" placeholder="Escreva sobre seu dia..."><?php echo $_POST['body_note'] ?? '';?></textarea>
                     </div>
                 </div>
             </div>
+            </form>
         </section>
     </main>
     <footer class="footer bg-dark text-light mt-4">
@@ -150,3 +153,5 @@
 
 
 </html>
+
+
