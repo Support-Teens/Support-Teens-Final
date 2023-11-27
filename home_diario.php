@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <link rel="icon" href="/public/svg_diario/logo.svg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home Diário - Support Teens</title>
+    <title>Home Diário | Support Teens</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style-home-diario.css">
@@ -68,25 +69,28 @@
 
                 <div class="files">
                     <div><img src="./public/svg_diario/options-folder.svg">Pastas</div>
-                    <button><a href="#"><img src="./public/svg_diario/options-folder-arrow-right.svg">Pasta
+                    <p style="font-size: 0.8rem; padding-top: 0.5rem">Em breve...</p><br>
+                    <!--<button><a href="#"><img src="./public/svg_diario/options-folder-arrow-right.svg">Pasta
                             1<a></button>
                     <button><a href="#"><img src="./public/svg_diario/options-folder-arrow-right.svg">Pasta
                             2<a></button>
                     <button><a href="#"><img src="./public/svg_diario/options-folder-arrow-right.svg">Pasta
-                            3<a></button>
+                            3<a></button>-->
 
                 </div>
                 <div class="tags">
                     <div class="tags-title"><img src="./public/svg_diario/options-tag.svg">Tags</div>
                     <div class="tags-button">
-                        <button><a href="#">Tag 1<a></button>
+                        <p style="font-size: 0.8rem; padding-top: 0.5rem">Em breve...</p><br>
+                        <!--<button><a href="#">Tag 1<a></button>
                         <button><a href="#">Tag 2<a></button>
                         <button><a href="#">Tag 3<a></button>
+                        <button><a href="#">Tag 4<a></button>-->
                     </div>
                 </div>
                 <div class="calendar">
                     <div><img src="./public/svg_diario/options-calendar.svg">Calendário</div>
-                    <label for="data">Selecione uma data:</label>
+                    <label for="data">Selecione uma data:</label><br>
                     <input type="date" id="data" name="data">
                     <button onclick="filtrarPorData()">Filtrar</button>
                     <!-- Seu conteúdo a ser filtrado aqui -->
@@ -112,92 +116,36 @@
                 <button><a href="#"><img src="./public/svg_diario/content-folder.svg"><a></button>
             </div>
             <div class="all-notes">
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-                <a href="diario.php">
-                    <div class="note">
-                        <h6 class="date-note">Segunda, 12 de setembro, 2023</h6>
-                        <h3 class="title-note">Título</h3>
-                        <div class="note-content">Corpo do texto</div>
-                    </div>
-                </a>
-            </div>
+                <?php
+                    $hostname = "localhost";
+                    $bancodedados = "diario";
+                    $usuario = "root";
+                    $senha = "";
 
+                    $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
+                    if($mysqli->connect_errno){
+                        echo "falha ao conectar:(" . $mysqli->connect_errno . ")" . mysqli -> connect_errno;
+                    }
+                    $sql = "SELECT id_note, date_note, hour_note, title_note, body_note FROM notes order by hour_note DESC";
+                    $resultado = $mysqli->query($sql);
+
+                    if ($resultado->num_rows > 0) {
+                        while ($row = $resultado->fetch_assoc()) {
+                            echo '<a href="diario_editar_note.php?id=' . $row['id_note'] . '">';
+                                echo '<div class="note">';
+                                    echo '<div class="date-hour">';
+                                        echo '<p class="date-note">' . $row['date_note']. '</p>';
+                                        echo '<p class="hour-note">' . $row['hour_note']. '</p>';
+                                    echo '</div>';
+                                    echo '<h3 class="title-note">'. $row['title_note'] . '</h3>';
+                                    echo '<div class="note-content">'. $row['body_note'] . '</div>';
+                                echo '</div>';
+                            echo '</a>';
+                    }} else {
+                        echo 'Nenhuma anotação encontrada.';
+                    }
+                ?>
+            </div>
         </section>
     </main>
     <footer class="footer bg-dark text-light mt-4">
@@ -235,6 +183,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="home_diario.js"></script>
 </body>
 
 </html>
+
