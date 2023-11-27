@@ -1,45 +1,5 @@
 
 <?php
-    /*/ verificar se a nota ID foi passada via parâmetro GETif (isset($_GET['id'])) {
-    if (isset($_GET['id'])) {
-        $nota_id = $_GET['id'];
-    
-        // Conectar ao banco de dados (substitua isso com suas configurações)
-        $hostname = "localhost";
-        $bancodedados = "diario";
-        $usuario = "root";
-        $senha = "";
-
-        $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
-        if($mysqli->connect_errno){
-            echo "falha ao conectar:(" . $mysqli->connect_errno . ")" . mysqli -> connect_errno;
-        }
-        // Preparar e executar a consulta
-        $stmt = $mysqli->prepare("SELECT date_note, hour_note, title_note, body_note FROM notes WHERE id_note = ?");
-        $stmt->bind_param("i", $nota_id);
-        $stmt->execute();
-        $stmt->bind_result($date_note, $hour_note, $title_note, $body_note);
-    
-        // Buscar os dados da nota
-        if ($stmt->fetch()) {
-            // Exibir formulário de edição
-            echo '<form action="salvar_edicao.php" method="post">';
-            echo '<input type="hidden" name="id" value="' . $nota_id . '">';
-            echo '<textarea name="conteudo">' . $body_note . '</textarea>';
-            echo '<input type="submit" value="Salvar">';
-            echo '</form>';
-        } else {
-            echo 'Nota não encontrada.';
-        }
-    
-        // Fechar a conexão
-        $stmt->close();
-        $mysqli->close();
-    } else {
-        echo 'ID da nota não fornecido.';
-    }
-?>*/
-
 
 // Verificar se o ID da nota foi passado via parâmetro GET
 if (isset($_GET['id'])) {
@@ -130,8 +90,11 @@ if (isset($_GET['id'])) {
                     <div class="actions">
                         <a href="home_diario.php"><button class="home"><img src="./public/svg_diario/actions-home.svg"
                                     alt="Ícone de casa"></button></a>
-                        <a href="#"><button class="delete"><img src="./public/svg_diario/actions-delete.svg"
-                                    alt="Ícone de lixeira"></button></a>
+                        <form action="diario_excluir_note.php" method="post">
+                            <input type="hidden" name="id_note" value="<?php echo $nota_id; ?>">
+                            <button type="submit" name="diario_excluir_note"><img src="./public/svg_diario/actions-delete.svg"
+                                    alt="Ícone de lixeira"></button>
+                        </form>
                         <button class="print" onclick="salvarPDF()"><img src="./public/svg_diario/actions-print.svg"
                                 alt="Ícone de impressora"></button>
                         <a href="#"><button class="previous"><img src="./public/svg_diario/actions-previous.svg"
