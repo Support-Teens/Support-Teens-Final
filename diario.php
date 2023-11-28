@@ -90,7 +90,7 @@ include "restricao.php"
                 <p id="horaAtual" name="hour_note"></p>
             </div>
             <div class="toolbar">
-                <button type="submit" name="save_note"><img src="./public/svg_diario/diary-toolbar-save.svg" alt="Desfazer"></button>
+                <button type="submit" name="save_note"><img src="./public/svg_diario/diary-toolbar-save.svg" alt="Salvar"></button>
                 <button><a href="#"><img src="./public/svg_diario/diary-toolbar-undo.svg" alt="Salvar"></a></button>
                 <button><a href="#"><img src="./public/svg_diario/diary-toolbar-clipboard.svg"
                             alt="Desfazer"></a></button>
