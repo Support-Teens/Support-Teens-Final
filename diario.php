@@ -1,3 +1,7 @@
+<?php 
+include "conexao.php";
+include "restricao.php"
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

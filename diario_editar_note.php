@@ -1,4 +1,7 @@
-
+<?php 
+include "conexao.php";
+include "restricao.php"
+?>
 <?php
 
 // Verificar se o ID da nota foi passado via parâmetro GET

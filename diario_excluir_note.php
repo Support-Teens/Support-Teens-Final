@@ -1,3 +1,7 @@
+<?php 
+include "conexao.php";
+include "restricao.php"
+?>
 <?php
 if (isset($_POST['diario_excluir_note'])) {
     // Certifique-se de validar e obter o ID da nota a ser excluída

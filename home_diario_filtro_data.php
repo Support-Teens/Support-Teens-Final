@@ -1,3 +1,7 @@
+<?php 
+include "conexao.php";
+include "restricao.php"
+?>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['data'])) {
     // Certifique-se de validar e sanitizar a data de pesquisa

@@ -1,4 +1,7 @@
-
+<?php 
+include "conexao.php";
+include "restricao.php"
+?>
 <?php
     $hostname = "localhost";
     $bancodedados = "diario";

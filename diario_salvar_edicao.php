@@ -1,3 +1,7 @@
+<?php 
+include "conexao.php";
+include "restricao.php"
+?>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Certifique-se de validar e sanitizar os dados do formulário antes de usá-los
