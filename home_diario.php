@@ -129,7 +129,7 @@ include "restricao.php"
                     if($mysqli->connect_errno){
                         echo "falha ao conectar:(" . $mysqli->connect_errno . ")" . mysqli -> connect_errno;
                     }
-                    $sql = "SELECT id_note, date_note, hour_note, title_note, body_note FROM notes order by hour_note DESC";
+                    $sql = "SELECT id_note, date_note, hour_note, title_note, body_note FROM notes order by date_note DESC, hour_note DESC";
                     $resultado = $mysqli->query($sql);
 
                     if ($resultado->num_rows > 0) {
