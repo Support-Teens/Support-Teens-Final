@@ -1,6 +1,6 @@
 <?php
 include "conexao.php";
-include "restricao.php"
+include "protecao_med.php"
     ?>
 
 <!DOCTYPE html>
@@ -162,35 +162,8 @@ include "restricao.php"
                     conversas</h1>
 
 
-                <h1 style="font-size: 32px; font-weight: 400; margin-left: 80px; margin-top: 20px;">Amigo1</h1>
+                <h1 style="font-size: 32px; font-weight: 400; margin-left: 80px; margin-top: 20px;">Chat 1</h1>
                 <h1 style=" color: #8E8E8E;font-size: 16px; font-weight: 400; margin-left: 80px; margin-top: -20px;">
-                    Texto</h1>
-                <a href="chat.php"><img src="./public/img_kaue/Enter.png"
-                        style="width: 35px; height: 35px; margin-top: -140px; margin-left: 210px;"> </a>
-                <img src="./public/img_kaue/Amigo.png" style="width: 66px; height: 66px; margin-top: -105px;">
-
-
-
-                <h1 style="font-size: 32px; font-weight: 400; margin-left: 80px; margin-top: 50px">Amigo2</h1>
-                <h1 style=" color: #8E8E8E; font-size: 16px; font-weight: 400; margin-left: 80px; margin-top: -20px;">
-                    Texto</h1>
-                <a href="chat.php"><img src="./public/img_kaue/Enter.png"
-                        style="width: 35px; height: 35px;  margin-top: -140px; margin-left: 210px;"> </a>
-                <img src="./public/img_kaue/Amigo.png" style="width: 66px; height: 66px; margin-top: -105px;">
-
-
-
-                <h1 style=" font-size: 32px; font-weight: 400;  margin-left: 80px; margin-top: 50px">Amigo3</h1>
-                <h1 style=" color: #8E8E8E;; font-size: 16px; font-weight: 400; margin-left: 80px; margin-top: -20px;">
-                    Texto</h1>
-                <a href="chat.php"><img src="./public/img_kaue/Enter.png"
-                        style="width: 35px; height: 35px; margin-top: -140px; margin-left: 210px;"> </a>
-                <img src="./public/img_kaue/Amigo.png" style="width: 66px; height: 66px;  margin-top: -105px;">
-
-
-
-                <h1 style="font-size: 32px; font-weight: 400; margin-left: 80px; margin-top: 50px">Amigo4</h1>
-                <h1 style=" color: #8E8E8E; font-size: 16px; font-weight: 400; margin-left: 80px; margin-top: -20px">
                     Texto</h1>
                 <a href="chat.php"><img src="./public/img_kaue/Enter.png"
                         style="width: 35px; height: 35px; margin-top: -140px; margin-left: 210px;"> </a>
