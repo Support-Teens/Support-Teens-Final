@@ -120,15 +120,6 @@ include "protecao_pac.php";
             </div>
             <div class="all-notes">
                 <?php
-                    $hostname = "localhost";
-                    $bancodedados = "diario";
-                    $usuario = "root";
-                    $senha = "";
-
-                    $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
-                    if($mysqli->connect_errno){
-                        echo "falha ao conectar:(" . $mysqli->connect_errno . ")" . mysqli -> connect_errno;
-                    }
                     $sql = "SELECT id_note, date_note, hour_note, title_note, body_note FROM notes order by date_note DESC, hour_note DESC";
                     $resultado = $mysqli->query($sql);
 

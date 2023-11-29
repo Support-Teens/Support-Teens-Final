@@ -8,16 +8,6 @@ include "protecao_pac.php";
 if (isset($_GET['id'])) {
     $nota_id = $_GET['id'];
 
-    // Conectar ao banco de dados (substitua isso com suas configurações)
-    $hostname = "localhost";
-    $bancodedados = "diario";
-    $usuario = "root";
-    $senha = "";
-
-    $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
-    if($mysqli->connect_errno){
-        echo "falha ao conectar:(" . $mysqli->connect_errno . ")" . mysqli -> connect_errno;
-    }
     // Preparar e executar a consulta
     $stmt = $mysqli->prepare("SELECT date_note, hour_note, title_note, body_note FROM notes WHERE id_note = ?");
     $stmt->bind_param("i", $nota_id);
