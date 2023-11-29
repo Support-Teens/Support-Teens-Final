@@ -1,121 +1,75 @@
+<?php
+
+include('conexao.php');
+
+?>
+
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./public/logo.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Home - Support Teens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="login.css">
+    <title>Entrar - Cadastrar</title>
 </head>
 
 <body>
 
+<a href="#" onclick="history.back()"><i class='ico bx bx-left-arrow-alt'></i></a>
 
-    <header class="fixed-header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="./public/svg_diario/logo.svg" alt="Logo: aperto de mãos" height="30"
-                    class="d-inline-block align-top">
-                Support Teens
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="home_u.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro.php">Cadastro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="HomeChat.php">Chat</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Descritiva.php">Descritiva</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contato.php">Contato</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.php">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="home_diario.php">Diário</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="perfil.php">Perfil</a>
-                    </li>
-                </ul>
+    <div class="container" id="container">
+    <div class="form-container sign-up">
+        <form action="si_cadastro.php" method="POST">
+            <h1>Criar conta</h1>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
-        </nav>
-    </header>
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6-ml-6 d-flex flex-column align-items-left">
-                <div class="nome">
-                    <h2 class="support">SUPPORT</h2>
-                    <h1 class="teens">TEENS</h1>
-                </div>
-                <img class="img" src="./public/logo.png" alt="logo">
+            <span>ou use seu e-mail para cadastro</span>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Criar</button>
+        </form>
+    </div>
+    <div class="form-container sign-in">
+        <form action="si_login.php" method="POST">
+            <h1>Entrar</h1>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
-
-            <div class="col-md-6 d-flex flex-column align-items-right">
-                <h3>É novo por aqui?</h3>
-                <h4>Clique aqui e faça seu cadastro</h4>
-                <a href="cadastro.php"><button class="btn_1">CADASTRE-SE</button></a>
-                <h6>Já possui cadastro?</h6>
-                <a href="login.php"><button class="btn_2">FAZER LOGIN</button></a>
+            <span>ou use seu email e senha</span>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <a href="recuperar_senha.php">Esqueceu sua senha?</a>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Bem-vindo de volta</h1>
+                <p>Volteeiiii</p>
+                <button class="hidden" id="login">Entrar</button>
+                <a href="login_med.php" class="hidden" style="color: white;">Sou um médico</a>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Não é registrado?</h1>
+                <p>Registre-se com seus dados pessoais para usar todos os recursos do site</p>
+                <button class="hidden" id="register">Cadastrar</button>
+                <a href="login_med.php" class="hidden" style="color: white;">Sou um médico</a>
             </div>
         </div>
     </div>
+</div>
 
-
-
-    <footer class="footer bg-dark text-light mt-4">
-        <div class="container">
-            <table class="footer-table">
-                <tbody>
-                    <tr>
-                        <th>Institucional</th>
-                        <th>Contate-nos</th>
-                        <th>Acessibilidade</th>
-                        <th>Minha conta</th>
-                        <th>Privacy Policy</th>
-                        <th>Siga-nos</th>
-                    </tr>
-                    <tr>
-                        <td><a href="sobre.php">Sobre nós</a></td>
-                        <td><a href="mailto:">Email</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="Contato.php">Trabalhe Conosco</a></td>
-                        <td>Whatsapp</td>
-                    </tr>
-                    <tr>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </footer>
-    <div class="rectangle_footer">
-        <p style="color: black;">@Copyright Support Teens 2023 -
-            Todos os
-            direitos
-            reservados.</p>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="voltar.js"></script>
 </body>
 
 </html>
