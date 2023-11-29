@@ -1,6 +1,6 @@
 <?php 
 include "conexao.php";
-include "restricao.php"
+include "protecao_pac.php"
 ?>
 <?php
     $hostname = "localhost";
