@@ -1,8 +1,8 @@
 <?php
 
-$usuario = 'root';
-$senha = '';
-$database = 'site1';
+$usuario = 'dese0964_site1';
+$senha = 'si@171156;
+$database = 'dese0964_site1';
 $host = 'localhost';
 
 $mysqli = new mysqli($host, $usuario, $senha, $database);
