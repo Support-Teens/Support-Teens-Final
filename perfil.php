@@ -1,3 +1,7 @@
+<?php 
+include "conexao.php";
+include "restricao.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,32 +62,54 @@
         <div class="row">
             <div class="col-md-6 d-flex flex-column align-items-left">
                 <h1>Deseja alterar dados?</h1>
+                <form action="perfil_alterar_dados.php" method="POST">    
                 <div class="textfield">
-                    <form>
-                        <label for="adress">Endereço</label>
-                        <input name="adress" type="text" placeholder="Ex.: Av., Rua," id="adress">
-                    </form>
-                </div><br>
-                <div class="textfield">
-                    <form>
-                        <label for="fone">Telefone</label>
-                        <input name="fone" type="text" placeholder="(XX) XXXXX-XXXX" id="fone">
-                    </form>
-                </div><br>
-                <div class="textfield">
-                    <form>
-                        <label for="occupation">Profissão</label>
-                        <input name="occupation" type="text" placeholder="Ex: Estudante" id="occupation">
-                    </form>
-                </div><br>
-                <div class="textfield">
-                    <form>
-                        <label for="about">Sobre você</label>
-                        <textarea style="resize: none;" name="about" type="" placeholder="Escreva algo sobre você"
-                            id="about"></textarea>
-                    </form>
-                </div><br>
-            </div>
+                    <?php
+                        $hostname = "localhost";
+                        $bancodedados = "diario";
+                        $usuario = "root";
+                        $senha = "";
+
+                        $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
+                        if($mysqli->connect_errno){
+                            echo "falha ao conectar:(" . $mysqli->connect_errno . ")" . mysqli -> connect_errno;
+                        }
+                        $sql = "SELECT email, phone, occupation, about FROM perfil";
+                        $resultado = $mysqli->query($sql);
+
+                        if ($resultado) {
+                            $row = $resultado->fetch_assoc();
+                        }
+                        ?>
+                                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+
+                            <label for="email">E-mail</label><br>
+                            <input name="email" type="text" placeholder="exemplo@gmail.com" id="email" required 
+                            value="<?php echo $row['email'];                   
+                            ?>">
+                    </div><br>
+                    <div class="textfield">
+                            <label for="phone">Telefone</label><br>
+                            <input name="phone" type="text" placeholder="(XX) XXXXX-XXXX" id="phone" required
+                            value="<?php echo $row['phone'];                   
+                            ?>">
+                    </div><br>
+                    <div class="textfield">
+                            <label for="occupation">Profissão</label><br>
+                            <input name="occupation" type="text" placeholder="Ex: Estudante" id="occupation" required
+                            value="<?php echo $row['occupation'];                   
+                            ?>">
+                    </div><br>
+                    <div class="textfield">
+                      
+                            <label for="about">Sobre você</label><br>
+                            <textarea style="resize: none;" name="about" type="" placeholder="Escreva algo sobre você"
+                                id="about"><?php echo $row['about']; ?></textarea>
+                        
+                    </div><br>
+                    <input type="submit" name="send" value="enviar" id="send">
+                    </div>
+                </form>
             <div class="col-md-6 d-flex flex-column align-items-center">
                 <section class="perfil">
                     <div class="avatar">
